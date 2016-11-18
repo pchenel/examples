@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='description' content='opis'>
+    <title>html dictionary</title>
+    <link rel='stylesheet' href='css/style.css'>
+</head>
+
+<body>
+<!-- komentarz -->
+    <header>
+        <h1>Krótka ściąga z podstaw html-a i css-a</h1>
+    </header>
+    <nav>
+        <h2>Nawigacja po stronie</h2>
+        <p>
+            Warto każdej sekcji nadać <b>id(#)</b> dzięki temu mamy łatwiejszą nawigację po stronie używając po prostu linków do danych sekcji.
+            <br>Pod koniec paragrafów jest link "Wróć na górę strony". Ułatwia on nawigowanie po stronie.
+        </p>
+        <ul>
+            <a href='#basicTags'>Podstawowe znaczniki</a>
+            <a href='#lists'>Listy</a>
+            <a href='#links'>Hiperłącza</a>
+            <a href='#iframes'>Ramki pływające</a>
+            <a href='#images'>Obrazki</a>
+            <a href='#tables'>Tabele</a>
+            <a href='#forms'>Formularze</a>
+            <a href='#additionalInfo'>Dodatkowe informacje</a>
+        </ul>
+        <ul>
+        	<a href='#cssInfo'>Ogólne informacje</a>
+        </ul>
+    </nav>
+    <hr>
+    <section id='html'>
+    	<h2>HTML</h2>
+        <div id='basicTags'>
+            <h2>Podstawowe informacje</h2>
+            <p>
+            	W sekcji <b>head</b> umieszczam znacznik <b>link</b>, dzięki któremu będę mogła podpiąć arkusz <b>style.css</b>. Jest to zewnętrzny plik zawierający wszystkie style użyte na stronie.
+            </p>
+            <h3>Znaczniki</h3>
+            <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+                Non-braking&nbsp;space - zapobiega łamaniu wierwsza w miejscu, w którym została użyta. Nie używać jako dodatkowa spacja!
+            </p>
+            <p>
+                <strong>Strong pogrubia</strong> i wyróżnia tekst. Również dla aplikacji.
+                <br><em>Em pochyla</em> czcionkę i wyróżnia znaczenie słowa. Również dla aplikacji.
+                <br><b>Tu jest tylko pogrubiona czcionka.</b> Nie jest to widoczne przez syntezatory mowy.
+                <br><i>Tu jest tylko pochylona czcionka.</i> Nie jest to czytane przez syntezatory mowy.
+            </p>
+            <p>
+                Znacznik <small>small</small> zmniejsza czcionke o jeden rozmiar. <small>Właściwie się tego nie używa bo pełną kontrolę nad czcionka mamy w css.</small>
+                <br>Znacznik
+                <mark>mark</mark> podświetla tło tekstu. To samo co wyżej.
+                <br>Znacznik <sub>sub</sub> to indeks dolny.
+                <br>Znacznik <sup>sup</sup> to indeks górny.
+                <br>Znacznik
+                <s>strikethrough</s> przekreśla tekst. Czasami się przydaje.
+                <br>Znacznika
+                <del>del</del> jest używany ze znacznikiem
+                <ins>ins</ins> dla zwrócenia uwagi, że jeden fragment tekstu jest zastąpiony innym tekstem.
+            </p>
+        </div>
+        <hr>
+        <!--horizontal line-->
+        <div id='lists'>
+            <h3>Listy</h3>
+            <p>
+                Listy możemy w sobie zagnieżdżać.
+            </p>
+            <h4>Lista uporządkowana.</h4>
+            <ol>
+                <li>Element 1</li>
+                <li>Element 2</li>
+                <li>Element 3</li>
+            </ol>
+            <h4>Lista nieuporządkowana.</h4>
+            <ul>
+                <li>Element 1</li>
+                <li>Element 2</li>
+                <li>Element 3</li>
+            </ul>
+            <h4>Lista definicji.</h4>
+            <dl>
+                <dt>Pojęcie 1</dt>
+                <dd>Definicja pojęcia 1</dd>
+                <dt>Pojęcie 2</dt>
+                <dd>Definicja pojęcia 2</dd>
+                <dt>Pojęcie 3</dt>
+                <dd>Definicja pojęcia 3</dd>
+            </dl>
+            <a href='#'>Wróć na górę strony</a>
+        </div>
+        <hr>
+        <div id='links'>
+            <h3>Hiperłącza (linki)</h3>
+            <a href='http://www.coderslab.pl' rel='nofollow' target='_blank'>
+		CodersLab
+		</a>
+            <p>
+                Atrybut <b>rel</b> jest stosowany na potrzeby pozycjonowania, może przyjmować wartość <i>nofollow</i> - nie podążaj, lub <i>dofollow</i> - podążaj, domyślna.
+                <br>Atrybut <b>target</b> okresla, w jakim miejscu ma być otwarty link, przyjmuje wartości: <i>_blank</i> - otwórz w nowej karcie, lub <i>_self</i> - otwórz w tej samej karcie.
+            </p>
+            <a href='#'>Wróć na górę strony</a>
+        </div>
+        <hr>
+        <div id='iframes'>
+            <h3>Ramka pływająca (iframe)</h3>
+            <iframe scr='https://www.smashingmagazine.com/'>
+                moje portfolio fotograficzne
+            </iframe>
+            <a href='#'>Wróć na górę strony</a>
+        </div>
+        <hr>
+        <div id='images'>
+            <h3>Obrazki</h3>
+            <img src='images/warsaw001small.jpg' alt='przykładowe zdjęcie' title='Zachód nad Warszawą' width='567' height='378'>
+            <p>
+                Przykładowe zdjęcie ma założone wymiary (nie są konieczne), które pozwalają przeglądarce zarezerwować miejsce. Atrybut <b>alt</b> określa tekst alternatywny, który wyświetla się gdy obrazek się nie załaduje i jest czytany przez syntezatory mowy. Atrybut <b>title</b> nadaje tekst opisujący co jest na obrazku, wyświetla się po najechaniu na obrazek kursorem myszy.
+            </p>
+            <a href='#'>Wróć na górę strony</a>
+        </div>
+        <hr>
+        <div id='tables'>
+            <h3>Tabele</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th scope='col'>col 1</th>
+                        <th scope='col'>col 2</th>
+                        <th scope='col'>col 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope='row'>row 1</th>
+                        <td colspan='2'>1.12</td>
+                        <td>1.3</td>
+                    </tr>
+                    <tr>
+                        <th scope='row'>row 2</th>
+                        <td>2.1</td>
+                        <td>2.2</td>
+                        <td rowspan='2'>23.3</td>
+                    </tr>
+                    <tr>
+                        <th scope='row'>row 3</th>
+                        <td>3.1</td>
+                        <td>3.2</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope='row'>suma</th>
+                        <th>3</th>
+                        <th>3</th>
+                        <th>2</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <p>
+                Tabele można podzielić na trzy sekcje: <b>thead, tbody, tfoot</b>. Nie jest on wymagany, pozwala jednak uporządkowac tabelę i ułatwia pisanie css.
+            </p>
+            <a href='#'>Wróć na górę strony</a>
+        </div>
+        <hr>
+        <div id='forms'>
+        	<h3>Formularze</h3>
+        	<form>
+        		<fieldset>
+        			<legend>Twoje dane</legend>
+        			<label for='name'>Imię:</label>
+        			<br><input type='text' name='name' placeholder='Imię'>
+        			<br><label>E-mail:
+        				<br><input type='email' name='email' placeholder='E-mail'>
+        			</label>
+        			<br><input type='submit' value='Wyślij'>
+        			<br><input type='button' value='Przycisk'>
+        		</fieldset>
+        		<fieldset>
+        			<legend>Formularz logowania</legend>
+        			<label>Login:
+        				<br><input type='text' name='login' placeholder='Login'>
+        			</label>
+        			<br><label>Hasło:
+        				<br><input type='password' name='password' placeholder='Hasło'>
+        			</label>
+        			<br><input type='submit' name='Zaloguj się'>
+        		</fieldset>
+        		<fieldset>
+        			<legend>Podstawowy checkbox</legend>
+        			<label>
+        				<input type='checkbox' value='box1' checked>
+        				Dzięki atrybutowi <b>checked</b> mam zaznaczenie od razu.
+        			</label>
+        			<br><label>
+        				<input type='checkbox' value='box2'>
+        				Box 2
+        			</label>
+        			<br><label>
+        				<input type='checkbox' value='box3'>
+        				Box 3
+        			</label>
+        		</fieldset>
+        		<fieldset>
+        			<legend>Tylko jedno możliwe zaznaczenie</legend>
+        			<label>
+        				Możesz wybrać to
+        				<input type='radio' name='choiceType' value='1' checked>
+        			</label>
+        			<label>
+        				lub to
+        				<input type='radio' name='choiceType' value='2'>
+        			</label>
+        			<label>
+        				lub to
+        				<input type='radio' name='chopceType' value='3'>
+        				ale tylko jeden z nich.
+        			</label>
+        		</fieldset>
+        		<fieldset>
+        			<legend>Wybierz kilka z listy</legend>
+        			<label>Zaznacz miasta:
+        				<select name='choiceCity' multiple>
+							<option value='1'>Warszawa</option>
+							<option value='2'>Kraków</option>
+							<option value='3'>Gdańsk</option>
+							<option value='4'>Lublin</option>
+        				</select>
+        			</label>
+        			<input type='submit' value='Wybierz'>
+        		</fieldset>
+        		<fieldset>
+        			<legend>Wybierz jeden z listy</legend>
+        			<label>Zaznacz kolor:
+        				<select name='choiceColor'>
+        					<optgroup label='niebieski'>
+        						<option value='1'>jasny</option>
+        						<option value='2'>ciemny</option>
+        					<optgroup label='czerwony'>
+        						<option value='1'>jasny</option>
+        						<option value='2'>ciemny</option>
+        					<optgroup label='żółty'>
+        						<option value='1'>jasny</option>
+        						<option value='2'>ciemny</option>
+        					<option value='4'>czarny</option>
+        				</select>
+        			</label>
+        			<input type='submit' value='Wybierz'>
+        		</fieldset>
+			</form>
+        	<a href='#'>Wróć na górę strony</a>
+        </div>
+        <hr>
+        <h2>Dodatkowe informacje</h2>
+        <div id='additionalInfo'>
+            <h3>Elementy liniowe i blokowe</h3>
+            <p>
+                Elementu znajdujące się w body dzielimy na elementy liniowe i blokowe.
+                <br><b>Elementy liniowe</b> zajmują dokładnie tyle miejsca ile realnie zajmuje ich zawartość. W jednej linii można umieścić więcej niż jeden taki element. Elementy liniowe to np.: <i>a, em, strong, img</i>.
+                <br><b>Elementy blokowe</b> zajmuja zawsze całą dostępną szerokość, nie ważne ile realnie miejsca potrzebują. W jednej linii można umieścić tylko jeden element blokowy. Przykłady: <i>p, ul, ol, h1-h6</i>.
+                <br>W elementach blokowych można umieszczać elementy liniowe.
+                <br>Jednak pewne cechy możemy zmieniać w css.
+            </p>
+            <h3>Identyfikatory i klasy</h3>
+            <p>
+                Warto do kontenerów i elementów dodawać identyfikatory i klasy, gdyż pozwalają one odróżniać elementy html od siebie, jak również ułatwiają pracę w css. Dany identyfikator może posiadac tylko jeden element, natomiast daną klasę mozemy nadawać wielu elementom.
+            </p>
+            <a href='#'>Wróć na górę strony</a>
+        </div>
+    </section>
+    <hr>
+    <section id='css'>
+    	<h2>CSS</h2>
+    	<div id='cssInfo'>
+    		<h3>Ogólne informacje</h3>
+    		<p>
+    			Style do strony można dodawać na 3 sposoby: poprzez atrybut <i>style</i>, poprzez element <i>style</i> dodawany najcześciej w sekcji head, oraz poprzez zewnętrzny <i>plik.css</i>. Najlepiej zawsze dodawać style poprzez zewnętrzny plik i tak będzie to robione w tym przypadku.
+    		</p>
+    		<p>
+    			Reguły CSS przypisujemy do: <b>elementów HTML</b>, atrybutu <b>id</b> elementu HTML, atrybutu <b>class</b> elementu HTML.
+    		</p>
+    		<a href='#'>Wróć na górę strony</a>
+    	</div>
+    </section>
+    <hr>
+    <footer>
+        <p>Prace nad witryną w toku. :)</p>
+        <p>Wszystkie uwagi, błędy, propozycję ulepszeń proszę zgłaszać na: pchenel@gmail.com</p>
+        <p>2016 Magdalena Lech</p>
+    </footer>
+</body>
+
+</html>
