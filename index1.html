@@ -10,7 +10,7 @@
 
 <body>
 <!-- komentarz -->
-    <header>
+    <header class="tileWidth">
         <h1>Krótka ściąga z podstaw html-a i css-a</h1>
     </header>
     <nav>
@@ -39,7 +39,7 @@
         <div id='basicTags'>
             <h2>Podstawowe informacje</h2>
             <p>
-            	W sekcji <b>head</b> umieszczam znacznik <b>link</b>, dzięki któremu będę mogła podpiąć arkusz <b>style.css</b>. Jest to zewnętrzny plik zawierający wszystkie style użyte na stronie.
+            	W sekcji <b>head</b> umieszczam znacznik <b>link</b>, dzięki któremu będę mogła podpiąć arkusz <b>style.css</b>. Jest to zewnętrzny plik zawierający wszystkie style użyte na stronie. Atrybut <b>rel</b> określa jakiego typu jest importowany plik, w wypadku stylów bedzie to <b>stylesheet</b>. Atrybut <b>href</b> określa położenie importowanego pliku, w tym wypadku bedzie to: <b>css/style.css</b>, ponieważ plik znajduje się w katalogu <b>css</b>.
             </p>
             <h3>Znaczniki</h3>
             <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -255,6 +255,20 @@
         			<input type='submit' value='Wybierz'>
         		</fieldset>
 			</form>
+            <form>
+                <fieldset>
+                    <legend>Twoje uwagi</legend>
+                    <label>
+                        <textarea cols="50" rows="10" placeholder="Tu wpisz swoje uwagi"></textarea>
+                    </label>
+                    <p>
+                        <input type="submit" imput="Zapisz">
+                    </p>
+                    <p>
+                        Element sluży do wpisywania większej ilości tekstu. Można dowolnie zmieniac jego wielkość chwytając za prawy dolny róg, można też ustawić początkową szerokość i wysokość używając do tego <b>cols</b> i <b>rows</b>. Użytkownik nadal może zmienać wielkość pola ale nie zejdzie poniżej wartości ustalonej.
+                    </p>
+                </fieldset>
+            </form>
         	<a href='#'>Wróć na górę strony</a>
         </div>
         <hr>
@@ -281,11 +295,25 @@
     	<div id='cssInfo'>
     		<h3>Ogólne informacje</h3>
     		<p>
-    			Style do strony można dodawać na 3 sposoby: poprzez atrybut <i>style</i>, poprzez element <i>style</i> dodawany najcześciej w sekcji head, oraz poprzez zewnętrzny <i>plik.css</i>. Najlepiej zawsze dodawać style poprzez zewnętrzny plik i tak będzie to robione w tym przypadku.
+    			Style do strony można dodawać na 3 sposoby: poprzez atrybut <i>style</i>, poprzez element <i>style</i> dodawany najcześciej w sekcji head, oraz poprzez zewnętrzny <i>plik.css</i>. Najlepiej zawsze dodawać style poprzez zewnętrzny plik i tak będzie to robione na tej stronie.
     		</p>
     		<p>
     			Reguły CSS przypisujemy do: <b>elementów HTML</b>, atrybutu <b>id</b> elementu HTML, atrybutu <b>class</b> elementu HTML.
     		</p>
+            <p>
+                Warto pilnowac porzadku w kodzie. Na tej stronie, na tą chwilę, zastosowałam podział stylów komentarzami (w kolejności) na:
+                <ol>
+                    <li>body</li>
+                    <li>header</li>
+                    <li>nav</li>
+                    <li>section</li>
+                    <li>footer</li>
+                </ol>
+            </p>
+            <h4>Kolory</h4>
+            <p>
+                Kolory w cssie  
+            </p>
     		<a href='#'>Wróć na górę strony</a>
     	</div>
     </section>
